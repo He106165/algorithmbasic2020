@@ -1,5 +1,7 @@
 package class03;
 
+import util.utilMethod;
+
 public class Code02_SmallSum {
 
 	public static int smallSum(int[] arr) {
@@ -117,7 +119,7 @@ public class Code02_SmallSum {
 
 	// for test
 	public static void main(String[] args) {
-		int testTime = 500000;
+		/*int testTime = 500000;
 		int maxSize = 100;
 		int maxValue = 100;
 		boolean succeed = true;
@@ -131,7 +133,11 @@ public class Code02_SmallSum {
 				break;
 			}
 		}
-		System.out.println(succeed ? "Nice!" : "Fucking fucked!");
+		System.out.println(succeed ? "Nice!" : "Fucking fucked!");*/
+
+			int[] arr={1,3,4,6,83,5,42,54,32,67,23,523,23,4523,214124,543256453,6,75};
+		System.out.println(smallSum(arr));
+		utilMethod.printArray(arr);
 	}
 
 }
