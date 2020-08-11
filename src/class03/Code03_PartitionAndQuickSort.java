@@ -1,5 +1,7 @@
 package class03;
 
+import util.utilMethod;
+
 public class Code03_PartitionAndQuickSort {
 
 	public static void swap(int[] arr, int i, int j) {
@@ -153,7 +155,15 @@ public class Code03_PartitionAndQuickSort {
 		System.out.println();
 	}
 
-	// for test
+	public static void main(String[] args) {
+		int[] arr={1,3,4,6,83,5,42,54,32,67,23,523,23,4523,214124,543256453,6,75};
+		System.out.println(netherlandsFlag(arr, 0, arr.length-1));
+		utilMethod.printArray(arr);
+	}
+
+
+
+	/*// for test
 	public static void main(String[] args) {
 		int testTime = 500000;
 		int maxSize = 100;
@@ -173,6 +183,6 @@ public class Code03_PartitionAndQuickSort {
 		}
 		System.out.println(succeed ? "Nice!" : "Oops!");
 
-	}
+	}*/
 
 }
