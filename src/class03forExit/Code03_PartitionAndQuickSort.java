@@ -23,6 +23,21 @@ public class Code03_PartitionAndQuickSort {
         return lessEqual;
     }
 
+    //在数组的给定范围之内，查找以最后一个数字为轴，小于等于排前面，大于排后面。最后将轴放到中心，返回轴位置
+    public static  int  partition2(int[] arr, int leftPor,int rightPor) {
+        int pivot = arr[rightPor];
+        int left = leftPor;
+        int right = rightPor - 1;
+        while (left <= right) {
+            while (left <= right && arr[left] <= pivot) left++; //寻找左边大于pivot 的第一个值
+            while (left <= right && arr[right] > pivot) right--;//寻找右边小于pivot 的第一个值
+            if (left < right) utilMethod.swap(arr, left, right);//交换
+        }
+        //交换最左边和最后一个数
+        utilMethod.swap(arr, left, rightPor);
+        return left;
+    }
+
     public static int[] netherlandsFlag(int[] arr, int L, int R) {
         if(L > R){
             return new int[] {-1,-1};

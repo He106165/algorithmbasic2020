@@ -2,6 +2,8 @@ package class04forExit;
 
 import util.utilMethod;
 
+import java.util.Vector;
+
 public class Code02_Heap01 {
 
     public static class MyHeap{
@@ -65,6 +67,7 @@ public class Code02_Heap01 {
         utilMethod.printArray(myHeap.data);
         System.out.println(myHeap.pop());
         utilMethod.printArray(myHeap.data);
-
+        Vector vector=new Vector();
+        vector.add(111);
     }
 }
