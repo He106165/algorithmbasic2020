@@ -279,14 +279,14 @@ public class Code01_TrieTree {
 					int ans2 = trie2.search(arr[j]);
 					int ans3 = right.search(arr[j]);
 					if (ans1 != ans2 || ans2 != ans3) {
-						System.out.println("Oops!");
+						System.out.println("Oops111!");
 					}
 				} else {
 					int ans1 = trie1.prefixNumber(arr[j]);
 					int ans2 = trie2.prefixNumber(arr[j]);
 					int ans3 = right.prefixNumber(arr[j]);
 					if (ans1 != ans2 || ans2 != ans3) {
-						System.out.println("Oops!");
+						System.out.println("Oops2222!");
 					}
 				}
 			}

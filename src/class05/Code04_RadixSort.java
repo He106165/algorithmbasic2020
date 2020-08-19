@@ -62,9 +62,14 @@ public class Code04_RadixSort {
 		
 		
 	}
+	public static void main(String[] args){
+		System.out.println(getDigit(156, 2));
+	}
+
 
 	public static int getDigit(int x, int d) {
-		return ((x / ((int) Math.pow(10, d - 1))) % 10);
+		int u=(int) Math.pow(10, d - 1);
+		return ((x / u) % 10);
 	}
 
 	// for test
@@ -123,7 +128,7 @@ public class Code04_RadixSort {
 		System.out.println();
 	}
 
-	// for test
+	/*// for test
 	public static void main(String[] args) {
 		int testTime = 500000;
 		int maxSize = 100;
@@ -148,6 +153,6 @@ public class Code04_RadixSort {
 		radixSort(arr);
 		printArray(arr);
 
-	}
+	}*/
 
 }
