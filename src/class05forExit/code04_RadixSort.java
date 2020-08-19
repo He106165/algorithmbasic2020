@@ -34,38 +34,34 @@ public class code04_RadixSort {
     public static void RadixSort(int[] arr,int L ,int R,int d){
         //定义一个和原数组等长的 辅助数组 ，用来第三步接收数据
         int[] help=new int[R-L+1];
+
         for (int i = 1; i <=d ; i++) {
             int[] count=new int[10];
             //把count的桶先填充好了
-            for (int j = L; j <R ; j++) {
-                int index=getDigit(arr[j], d);
+            for (int j = L; j <= R ; j++) {
+                int index=getDigit(arr[j], i);
                 count[index]++;
             }
             //把count的桶逐个相加
-            for (int j = 1; j <count.length-1; j++) {
+            for (int j = 1; j < count.length; j++) {
                 count[j]=count[j]+ count[j-1];
             }
             //arr倒序开始，找到在count的位置，然后放到help数组中去
-            for (int j = count.length-1; j >=0 ; j--) {
+            for (int j = R; j >= L ; j--) {
                 //找到位置
-                int index=getDigit(arr[j],d);
+                int index=getDigit(arr[j],i);
                 help[count[index]-1] = arr[j];
                 count[index]--;
             }
             //把数据从count到arr中去
-            /*for (int c = 0; c <count.length ; c++) {
-                arr[c]= count[c];
-            }*/
-            for (int h = L, j = 0; i <= R; i++, j++) {
+            for (int h = L, j = 0; h <= R; h++, j++) {
                 arr[h] = help[j];
             }
         }
     }
     public static void main(String[] args){
-        System.out.println(getDigit(3, 1));
-
-     /*   int[] arr={1,3,4,6,83,5,42,54,32,67,23,523,23,4523,214124,543256453,6,75};
+        int[] arr={1,3,4,6,83,5,42,54,32,67,23,523,23,4523,6,75};
         RadixSort(arr);
-        utilMethod.printArray(arr);*/
+        utilMethod.printArray(arr);
     }
 }
