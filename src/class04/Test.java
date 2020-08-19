@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 
-public class Test {
+public class  Test {
 
 	//  负数，o1 放在上面的情况
 	public static class MyComp implements Comparator<Integer>{
