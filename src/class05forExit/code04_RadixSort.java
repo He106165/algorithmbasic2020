@@ -60,8 +60,10 @@ public class code04_RadixSort {
         }
     }
     public static void main(String[] args){
-        int[] arr={1,3,4,6,83,5,42,54,32,67,23,523,23,4523,6,75};
+        /*int[] arr={1,3,4,6,83,5,42,54,32,67,23,523,23,4523,6,75};
         RadixSort(arr);
-        utilMethod.printArray(arr);
+        utilMethod.printArray(arr);*/
+        String ss="公称通径：50mm 压力等级：0.3mpa-0.7mpa 公称压力：1.6mpa";
+        System.out.println(ss.length());
     }
 }
